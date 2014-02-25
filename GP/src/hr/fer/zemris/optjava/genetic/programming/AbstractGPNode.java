@@ -85,22 +85,37 @@ public abstract class AbstractGPNode {
 	 * @param depth trenutna dubina stabla 
 	 */
 	public void createString(StringBuilder sb, int depth) {
+		pad(sb, depth);
 		sb.append(this.toString());
 		
 		if(nChildren() != 0) {
-			sb.append("(");
+			sb.append("(\n");
 		}		
 		
 		for(int i = 0; i < nChildren(); i++) {
 			children.get(i).createString(sb, depth + 1);
 			
 			if(i != nChildren() - 1) {
-				sb.append(", ");
+				sb.append(",");
 			}
+			
+			sb.append("\n");
 		}
 				
-		if(nChildren() != 0) {		
+		if(nChildren() != 0) {	
+			pad(sb, depth);
 			sb.append(")");
+		}
+	}
+	
+	/**
+	 * Nadopuni buffer sa zadanim brojem tabulatora
+	 * @param sb buffer
+	 * @param n broj tabulatora
+	 */
+	private void pad(StringBuilder sb, int n) {
+		for(int i = 0; i < n; i++) {
+			sb.append("\t");
 		}
 	}
 

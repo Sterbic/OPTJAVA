@@ -34,7 +34,7 @@ public class AntIfFoodAhead extends AbstractGPNode {
 	
 	@Override
 	public String toString() {
-		return "IfFoodAhead(";
+		return "IfFoodAhead";
 	}
 
 }
