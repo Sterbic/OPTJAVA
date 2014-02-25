@@ -4,6 +4,7 @@ OPTJAVA
 Implementations of various evolutionary computation algorithms in Java
 
 Projects:
+-------
 
 - NSGA : Implementation of the NSGA multiple objetive optimisation algorithm
 - NSGA-II : Implementation of the NSGA-II multiple objetive optimisation algorithm
